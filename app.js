@@ -21,6 +21,12 @@ app.get("/contact", (request, response) => {
     response.send(contact);
 });
 
+app.get("/", (request, response) => {
+    const greeting = {
+        "Greeting": "Hello"
+    }
+    response.send(greeting);
+})
 
 app.get("/projects", (request, response) => {
     const projects = {
