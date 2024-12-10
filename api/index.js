@@ -37,14 +37,53 @@ app.get("/", (request, response) => {
 
 app.get("/projects", (request, response) => {
     const projects = {
-        "project1": "here"
+        "Tea App": {
+            "Description" : "An app that allows you to track tea consumption",
+            "Technologies" : "C#, ASP.NET Core MVC, SQLServer, Azure",
+            "Link" : "www.katelynnperry.com/projects/teatimetracker"
+        },
+        "Term Tracker": {
+            "Description" : "A mobile app for tracking school terms, classes, and assignments",
+            "Technologies" : "C#, .NET MAUI, SQLite",
+            "Link" : "www.katelynnperry.com/projects/termtracker" 
+        },
+        "Appointment Scheduler" : {
+            "Description" : "A Winforms app for sheduling appointments",
+            "Technologies" : "C#, Winforms, MySQL",
+            "Link" : "www.katelynnperry.com/projects/appointments"
+        },
+        "Inventory Application" : {
+            "Description" : "A Winforms app for tracking inverntory",
+            "Technologies" : "C#, Winforms",
+            "Link" : "www.katelynnperry.com/projects/inventory"
+        },
+        "Ombros do Montejunto" : {
+            "Description" : "A React web app for a Portuguese winery",
+            "Technologies" : "HTML, CSS, React, JS",
+            "Link" : "www.katelynnperry.com/projects/ombros"
+        }
     }
     response.send(projects);
 });
 
 app.get("/experience", (request, response) => {
     const experience = {
-        "Job 1": "Job 1 here"
+        "Ombros do Montejunto": {
+            "Title" : "Web Developer",
+            "Additional Title" : "Brand Designer",
+            "Duration" : "< 1 year",
+            "Skills" : "JavaScript, React.js, Git, "
+        }
     }
     response.send(experience);
 });
+
+app.get("/hobbies", (request, response) => {
+    const hobbies = {
+        "1": "Baking",
+        "2" : "Crochet",
+        "3" : "Painting",
+        "4" : "Horseback Riding"
+    }
+    response.send(hobbies);
+})
