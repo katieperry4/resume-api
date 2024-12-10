@@ -20,3 +20,18 @@ app.get("/contact", (request, response) => {
     };
     response.send(contact);
 });
+
+
+app.get("/projects", (request, response) => {
+    const projects = {
+        "project1": "here"
+    }
+    response.send(projects);
+});
+
+app.get("/experience", (request, response) => {
+    const experience = {
+        "Job 1": "Job 1 here"
+    }
+    response.send(experience);
+});
