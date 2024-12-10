@@ -9,6 +9,13 @@ app.listen(PORT, () => {
     console.log("Listening on: ", PORT);
 });
 
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    next();
+})
+
 app.get("/contact", (request, response) => {
     const contact = 
     {
