@@ -80,10 +80,24 @@ app.get("/experience", (request, response) => {
 
 app.get("/hobbies", (request, response) => {
     const hobbies = {
-        "1": "Baking",
+        "1" : "Baking",
         "2" : "Crochet",
         "3" : "Painting",
         "4" : "Horseback Riding"
     }
     response.send(hobbies);
+})
+
+app.get("/certifications", (request, response) => {
+    const certs = {
+        "AWS Certified Cloud Practitioner" : {
+            "Expires" : "Sep 2027",
+            "Credential Id" : "d5e50502095c49c2a8f532ac0dab6fe8"
+        },
+        "ITIL Foundation Certificate in IT Service Management" : {
+            "Expires" : "Sep 2027",
+            "Credential Id" : "GR671692006KP"
+        }
+    }
+    response.send(certs);
 })
